@@ -1,57 +1,100 @@
-@JS("Telegram.WebApp")
 library telegram_js;
 
 /// this library contains all the apis of the telegram js library
-
-import 'package:js/js.dart';
+import 'dart:js_interop';
 import 'package:telegram_web_app/src/js/telegram/telegram_js_models.dart' as telegram_js_models;
+import 'telegram/telegram_js_models.dart';
 
-external String get initData;
-external String get version;
-external String get platform;
-external String get colorScheme;
-external String get headerColor;
-external String get backgroundColor;
-external bool get isClosingConfirmationEnabled;
-external bool get isExpanded;
-external double? get viewportHeight;
-external double? get viewportStableHeight;
-external String? get tgWebAppStartParam;
-external bool get isVerticalSwipesEnabled;
+String get initData => '';
 
-external telegram_js_models.ThemeParams get themeParams;
-external telegram_js_models.BackButton get BackButton;
-external telegram_js_models.MainButton get MainButton;
-external telegram_js_models.SettingsButton get SettingsButton;
-external telegram_js_models.HapticFeedback get HapticFeedback;
-external telegram_js_models.CloudStorage get CloudStorage;
-external telegram_js_models.BiometricManager get BiometricManager;
-external telegram_js_models.WebAppInitData get initDataUnsafe;
+String get version => '';
 
-external Future<void> ready();
-external Future<void> expand();
-external Future<void> close();
-external Future<void> enableClosingConfirmation();
-external Future<void> disableClosingConfirmation();
-external Future<void> sendData(String data);
-external Future<bool> isVersionAtLeast(version);
-external Future<void> setHeaderColor(String color);
-external Future<void> setBackgroundColor(String color);
-external Future<void> switchInlineQuery(query, [choose_chat_types]);
-external Future<void> openLink(url, [options]);
-external Future<void> openTelegramLink(String url);
-external Future<void> openInvoice(String url, [callback]);
-external Future<void> readTextFromClipboard([callback]);
+String get platform => '';
 
-external Future<void> requestWriteAccess([callback]);
-external Future<void> requestContact([callback]);
-external Future<void> shareToStory(String media_url, [params]);
-external Future<void> showPopup(telegram_js_models.PopupParams params, [callback]);
-external Future<void> showAlert(String message, [callback]);
-external Future<void> showConfirm(String message, [callback]);
-external Future<void> showScanQrPopup(telegram_js_models.ScanQrPopupParams params, [callback]);
-external Future<void> closeScanQrPopup();
-external void onEvent(String eventType, callback);
-external void offEvent(String eventType, callback);
-external Future<void> enableVerticalSwipes();
-external Future<void> disableVerticalSwipes();
+String get colorScheme => '';
+
+String get headerColor => '';
+
+String get backgroundColor => '';
+
+bool get isClosingConfirmationEnabled => false;
+
+bool get isExpanded => false;
+
+double? get viewportHeight => 0.0;
+
+double? get viewportStableHeight => 0.0;
+
+String? get tgWebAppStartParam => '';
+
+bool get isVerticalSwipesEnabled => false;
+
+telegram_js_models.ThemeParams get themeParams => telegram_js_models.ThemeParams();
+
+telegram_js_models.BackButton get BackButton => telegram_js_models.BackButton();
+
+telegram_js_models.MainButton get MainButton => telegram_js_models.MainButton();
+
+telegram_js_models.SettingsButton get SettingsButton => telegram_js_models.SettingsButton();
+
+telegram_js_models.HapticFeedback get HapticFeedback => telegram_js_models.HapticFeedback();
+
+telegram_js_models.CloudStorage get CloudStorage => telegram_js_models.CloudStorage();
+
+telegram_js_models.BiometricManager get BiometricManager => telegram_js_models.BiometricManager();
+
+telegram_js_models.WebAppInitData get initDataUnsafe => telegram_js_models.WebAppInitData();
+
+Future<void> ready() async {}
+
+Future<void> expand() async {}
+
+Future<void> close() async {}
+
+Future<void> enableClosingConfirmation() async {}
+
+Future<void> disableClosingConfirmation() async {}
+
+Future<void> sendData(String data) async {}
+
+Future<bool> isVersionAtLeast(version) async {
+  return false;
+}
+
+Future<void> setHeaderColor(String color) async {}
+
+Future<void> setBackgroundColor(String color) async {}
+
+Future<void> switchInlineQuery(query, [choose_chat_types]) async {}
+
+Future<void> openLink(url, [options]) async {}
+
+Future<void> openTelegramLink(String url) async {}
+
+Future<void> openInvoice(String url, [callback]) async {}
+
+Future<void> readTextFromClipboard([callback]) async {}
+
+Future<void> requestWriteAccess([callback]) async {}
+
+Future<void> requestContact([callback]) async {}
+
+Future<void> shareToStory(String media_url, [params]) async {}
+
+Future<void> showPopup(telegram_js_models.PopupParams params, [callback]) async {}
+
+Future<void> showAlert(String message, [callback]) async {}
+
+Future<void> showConfirm(String message, [callback]) async {}
+
+Future<void> showScanQrPopup(telegram_js_models.ScanQrPopupParams params, [callback]) async {}
+
+Future<void> closeScanQrPopup() async {}
+
+void onEvent(String eventType, callback) {}
+
+void offEvent(String eventType, callback) {}
+
+Future<void> enableVerticalSwipes() async {}
+
+Future<void> disableVerticalSwipes() async {}

@@ -1,9 +1,12 @@
+import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
 import 'package:telegram_web_app/telegram_web_app.dart' as tg;
 import 'package:telegram_web_app/telegram_web_app.dart';
 
 import '../../widgets/expandable_tile.dart';
 
+@JSExport()
 class BackButtonScreen extends StatefulWidget {
   const BackButtonScreen({super.key});
 
@@ -12,7 +15,7 @@ class BackButtonScreen extends StatefulWidget {
 }
 
 class _BackButtonScreenState extends State<BackButtonScreen> {
-  tg.BackButton get backButton => TelegramWebApp.instance.backButton;
+  tg.BackButtonExternal get backButton => TelegramWebApp.instance.backButton;
 
   TextEditingController controller = TextEditingController();
 

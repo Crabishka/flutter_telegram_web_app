@@ -1,3 +1,3 @@
-import 'package:js/js.dart';
+import 'dart:js_interop';
 
-JsDynamicCallback(Function callback) => allowInterop(callback);
+JsDynamicCallback(Function callback) =>  callback.toJS;

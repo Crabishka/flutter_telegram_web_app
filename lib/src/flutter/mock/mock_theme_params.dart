@@ -1,6 +1,6 @@
 part of '../../../telegram_web_app.dart';
 
-class MockThemeParams implements ThemeParams {
+class MockThemeParams {
   @override
   Color? get bgColor => const Color(0xff2ea6ff);
 

@@ -1,8 +1,10 @@
 part of '../../../telegram_web_app.dart';
 
-class ThemeParams {
+extension type ThemeParams(JSObject _) implements JSObject {
   static ThemeParams? _instance;
-  static ThemeParams get instance => _instance ??= ThemeParams();
+
+  static ThemeParams get instance =>
+      _instance ??= createJSInteropWrapper(telegram_js_models.ThemeParams()) as ThemeParams;
 
   Color? get bgColor => telegram_js.themeParams.bg_color.toColor();
 
@@ -29,5 +31,6 @@ class ThemeParams {
   Color? get subtitleTextColor => telegram_js.themeParams.subtitle_text_color.toColor();
 
   Color? get destructiveTextColor => telegram_js.themeParams.destructive_text_color.toColor();
+
   Color? get sectionSeparatorColor => telegram_js.themeParams.section_separator_color.toColor();
 }

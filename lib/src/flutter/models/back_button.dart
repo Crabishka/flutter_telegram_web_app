@@ -1,16 +1,16 @@
 part of '../../../telegram_web_app.dart';
 
-class BackButton {
-  BackButton._();
-  static BackButton? _instance;
-  static BackButton get instance => _instance ??= BackButton._();
+extension type BackButtonExternal(JSObject _) implements JSObject  {
+  // BackButton._();
+  static BackButtonExternal? _instance;
+  static BackButtonExternal get instance => _instance ??= createJSInteropWrapper(BackButton()) as BackButtonExternal;
 
   /// Shows whether the button is visible. Set to false by default.
   bool get isVisible => telegram_js.BackButton.isVisible;
 
   /// A method that sets the button press event handler.
   void onClick(void Function() callback) =>
-      telegram_js.BackButton.onClick(JsDynamicCallback(callback));
+      telegram_js.BackButton.onClick(callback);
 
   /// A method that removes the button press event handler.
   void offClick(void Function() callback) =>

@@ -44,19 +44,19 @@ class TelegramWebAppImpl extends TelegramWebApp {
   bool get isClosingConfirmationEnabled => telegram_js.isClosingConfirmationEnabled;
 
   @override
-  BackButton get backButton => BackButton.instance;
+  BackButtonExternal get backButton => BackButtonExternal.instance;
 
   @override
-  MainButton get mainButton => MainButton.instance;
+  MainButtonExtension get mainButton => MainButtonExtension.instance;
 
   @override
-  SettingsButton get settingButton => SettingsButton.instance;
+  SettingsButtonExtension get settingButton => SettingsButtonExtension.instance;
 
   @override
-  HapticFeedback get hapticFeedback => HapticFeedback.instance;
+  HapticFeedbackExtension get hapticFeedback => HapticFeedbackExtension.instance;
 
   @override
-  CloudStorage get cloudStorage => CloudStorage.instance;
+  CloudStorageExtension get cloudStorage => CloudStorageExtension.instance;
 
   @override
   BiometricManager get biometricManager => BiometricManager(telegram_js.BiometricManager);

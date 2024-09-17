@@ -56,23 +56,23 @@ abstract class TelegramWebApp {
   /// An object for controlling the back button
   /// which can be displayed in the header of
   /// the Mini App in the Telegram interface.
-  BackButton get backButton;
+  BackButtonExternal get backButton;
 
   /// An object for controlling the main button,
   /// which is displayed at the bottom of the
   /// Mini App in the Telegram interface.
-  MainButton get mainButton;
+  MainButtonExtension get mainButton;
 
   /// An object for controlling the Settings item
   /// in the context menu of the Mini App in the
   /// Telegram interface.
-  SettingsButton get settingButton;
+  SettingsButtonExtension get settingButton;
 
   /// An object for controlling haptic feedback.
-  HapticFeedback get hapticFeedback;
+  HapticFeedbackExtension get hapticFeedback;
 
   /// An object for controlling cloud storage.
-  CloudStorage get cloudStorage;
+  CloudStorageExtension get cloudStorage;
 
   /// An object for controlling biometrics on the device.
   BiometricManager get biometricManager;

@@ -1,14 +1,15 @@
 part of '../../../telegram_web_app.dart';
 
 ///https://core.telegram.org/bots/webapps#hapticfeedback
-class HapticFeedback {
-  static HapticFeedback? _instance;
-  static HapticFeedback get instance => _instance ??= HapticFeedback();
+extension type HapticFeedbackExtension(JSObject _) implements JSObject {
+  static HapticFeedbackExtension? _instance;
+
+  static HapticFeedbackExtension get instance =>
+      _instance ??= createJSInteropWrapper(HapticFeedback()) as HapticFeedbackExtension;
 
   /// A method tells that an impact occurred. The Telegram app may play
   /// the appropriate haptics based on style value passed
-  void impactOccurred(HapticFeedbackImpact impact) =>
-      telegram_js.HapticFeedback.impactOccurred(impact.name);
+  void impactOccurred(HapticFeedbackImpact impact) => telegram_js.HapticFeedback.impactOccurred(impact.name);
 
   /// A method tells that a task or action has succeeded, failed, or produced a warning.
   /// The Telegram app may play the appropriate haptics based on type value passed.

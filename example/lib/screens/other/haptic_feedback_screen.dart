@@ -10,7 +10,7 @@ class HapticFeedbackScreen extends StatefulWidget {
 }
 
 class _HapticFeedbackScreenState extends State<HapticFeedbackScreen> {
-  HapticFeedback get hapticFeedback => TelegramWebApp.instance.hapticFeedback;
+  HapticFeedbackExtension get hapticFeedback => TelegramWebApp.instance.hapticFeedback;
 
   @override
   Widget build(BuildContext context) {

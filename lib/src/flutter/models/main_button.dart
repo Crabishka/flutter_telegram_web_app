@@ -1,8 +1,9 @@
 part of '../../../telegram_web_app.dart';
 
-class MainButton {
-  static MainButton? _instance;
-  static MainButton get instance => _instance ??= MainButton();
+extension type MainButtonExtension(JSObject _) implements JSObject {
+  static MainButtonExtension? _instance;
+
+  static MainButtonExtension get instance => _instance ??= createJSInteropWrapper(MainButton()) as MainButtonExtension;
 
   /// Current button text. Set to CONTINUE by default.
   String get text => telegram_js.MainButton.text;
@@ -26,12 +27,10 @@ class MainButton {
   void setText(String text) => telegram_js.MainButton.setText(text);
 
   /// A method that sets the button press event handler.
-  void onClick(void Function() callback) =>
-      telegram_js.MainButton.onClick(JsDynamicCallback(callback));
+  void onClick(void Function() callback) => telegram_js.MainButton.onClick(JsDynamicCallback(callback));
 
   /// A method that removes the button press event handler.
-  void offClick(void Function() callback) =>
-      telegram_js.MainButton.offClick(JsDynamicCallback(callback));
+  void offClick(void Function() callback) => telegram_js.MainButton.offClick(JsDynamicCallback(callback));
 
   /// A method to make the button visible.
   /// Note that opening the Mini App from the attachment menu hides the main

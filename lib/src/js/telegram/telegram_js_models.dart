@@ -3,7 +3,7 @@ library telegram_js_internal;
 /// All the classes inside this library is for internal use only
 /// The represent js objects of Telegram js library
 
-import 'package:js/js.dart';
+import 'dart:js_interop';
 
 part 'src/events/write_access_requested_event_result.dart';
 part 'src/models/back_button.dart';

@@ -12,7 +12,7 @@ class CloudStorageScreen extends StatefulWidget {
 }
 
 class _CloudStorageScreenState extends State<CloudStorageScreen> {
-  CloudStorage get cloudStorage => TelegramWebApp.instance.cloudStorage;
+  CloudStorageExtension get cloudStorage => TelegramWebApp.instance.cloudStorage;
 
   TextEditingController setItemKeyController = TextEditingController();
   TextEditingController setItemValueController = TextEditingController();

@@ -6,6 +6,7 @@ part of '../../../telegram_web_app.dart';
 /// - allowed – user granted write permission to the bot,
 /// - cancelled – user declined this request.
 class WriteAccessRequestedEvent extends TelegramEvent {
+
   WriteAccessRequestedEvent(Function(WriteAccessRequestedEventResult result) eventHandler)
       : super(TelegramEventType.writeAccessRequested, eventHandler);
 }

@@ -1,13 +1,14 @@
 library telegram_web_app;
 
 import 'dart:convert';
+import 'dart:js_interop' hide Object;
 
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide BackButton;
 import 'package:telegram_web_app/src/bridge/flutter_js_bridge.dart';
 import 'package:telegram_web_app/src/bridge/js_callback.dart';
 import 'package:telegram_web_app/src/flutter/util/data_parser.dart';
 import 'package:telegram_web_app/src/js/telegram/telegram_js_models.dart' as telegram_js_models;
-import 'package:telegram_web_app/src/js/telegram/telegram_js_models.dart';
+import 'package:telegram_web_app/src/js/telegram/telegram_js_models.dart' ;
 import 'package:telegram_web_app/src/js/telegram_js.dart' as telegram_js;
 import 'package:telegram_web_app/telegram_web_app.dart';
 

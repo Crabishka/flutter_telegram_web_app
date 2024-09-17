@@ -13,7 +13,7 @@ class MainButtonScreen extends StatefulWidget {
 }
 
 class _MainButtonScreenState extends State<MainButtonScreen> {
-  MainButton get mainButton => TelegramWebApp.instance.mainButton;
+  MainButtonExtension get mainButton => TelegramWebApp.instance.mainButton;
 
   TextEditingController controller = TextEditingController();
 

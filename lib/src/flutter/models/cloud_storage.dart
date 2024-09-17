@@ -1,9 +1,9 @@
 part of '../../../telegram_web_app.dart';
 
 /// https://core.telegram.org/bots/webapps#cloudstorage
-class CloudStorage {
-  static CloudStorage? _instance;
-  static CloudStorage get instance => _instance ??= CloudStorage();
+extension type CloudStorageExtension (JSObject _) implements JSObject  {
+  static CloudStorageExtension? _instance;
+  static CloudStorageExtension get instance => _instance ??=  createJSInteropWrapper(CloudStorage()) as CloudStorageExtension ;
 
   /// A method that stores a value in the cloud storage using the specified key.
   /// You can store up to 1024 keys in the cloud storage

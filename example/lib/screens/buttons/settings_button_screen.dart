@@ -12,7 +12,7 @@ class SettingsButtonScreen extends StatefulWidget {
 }
 
 class _SettingsButtonScreenState extends State<SettingsButtonScreen> {
-  tg.SettingsButton get settingsButton => TelegramWebApp.instance.settingButton;
+  tg.SettingsButtonExtension get settingsButton => TelegramWebApp.instance.settingButton;
 
   TextEditingController controller = TextEditingController();
 
